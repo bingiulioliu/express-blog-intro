@@ -15,7 +15,13 @@ app.get('/', (request, response) => {
 });
 
 app.get('/bacheca', (request, response) => {
-    response.json(diarioDiBordo);
+    const diarioFormattato = diarioDiBordo.map(post => {
+        return {
+            ...post,
+            img: `${URL}${PORT}/imgs/${post.immagine}`
+        };
+    });
+    response.json(diarioFormattato);
 });
 
 
