@@ -1,4 +1,5 @@
 import express from 'express';
+import diarioDiBordo from './data/posts';
 
 const app = express();
 
