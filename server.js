@@ -1,5 +1,5 @@
 import express from 'express';
-import diarioDiBordo from './data/posts';
+import diarioDiBordo from './data/posts.js';
 
 const app = express();
 
@@ -14,7 +14,9 @@ app.get('/', (request, response) => {
     });
 });
 
-
+app.get('/bacheca', (request, response) => {
+    response.json(diarioDiBordo);
+});
 
 
 
